@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 200;
+    height: 12vh;
+}
+
+nav .nav-logo img {
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav .nav-logo img:hover {
+    transform: rotate(10deg);
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+nav .nav-links a {
+    font-size: 17px;
+    margin-left: 25px;
+    position: relative;
+}
+
+nav .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background-color: #0B81CA;
+    transition: all 0.5s ease;
+}
+
+nav .nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+nav .nav-links a:hover {
+    color: #0559CF;
+}
+
+nav .nav-login i {
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 50%;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+nav .nav-login i:hover {
+    background-color: #0559CF;
+}
+
+nav .navbar-menu,
+nav .menu-icon {
+    display: none;
+}
+
+nav .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+    padding: 20px;
+    z-index: 300;
+}
+
+nav .navbar-menu.active {
+    right: 0;
+}
+
+nav .navbar-menu ul {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 30px;
+    padding: 0;
+    border: none;
+}
+
+nav .navbar-menu ul li {
+    list-style: none;
+}
+
+nav .navbar-menu ul li a {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+nav .navbar-menu ul li a:hover {
+    color: #0559CF;
+}
+
+nav .navbar-menu .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.contact {
+    height: 45vh;
+    background-image: url(../img/backgond.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    width: 96%;
+    margin: auto;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero p {
+    opacity: 0.5;
+    margin-top: 8px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: -100px;
+}
+
+.box {
+    display: flex;
+    gap: 50px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 55%;
+    transform: scale(1.2);
+}
+
+.tab-side {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tab-btn {
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.active-tab {
+    background-color: #F1F7FF !important;
+    color: #000 !important;
+}
+
+.area {
+    width: 70%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.show-tab {
+    display: block;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.input-box {
+    width: 100%;
+}
+
+.input-box p {
+    font-size: 13px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.input-box input {
+    width: 90%;
+    padding: 10px;
+    background-color: #F1F7FF;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+
+.input-box input::placeholder {
+    font-size: 12px;
+}
+
+.input-box input:focus {
+    background-color: #d5dfed;
+}
+
+.message-field {
+    width: 95%;
+    height: 90px;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #116EF0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #5b91dc;
+}
+
+.panel {
+    font-size: 14px;
+}
+
+.panel p {
+    margin: 10px 0;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #116EF0;
+}
+
+@media screen and (max-width: 1200px) {
+    .tab-side {
+        display: none;
+    }
+    .tab-content-area {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .nav-links-area,
+    .user-area {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .contact-box {
+        width: 70%;
+        flex-direction: column;
+    }
+    .input-row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .contact-box {
+        width: 80%;
+        padding: 20px;
+    }
+    .input-box input,
+    .message-field {
+        width: 100%;
+    }
+}

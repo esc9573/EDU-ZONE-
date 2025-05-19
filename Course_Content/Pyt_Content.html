@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythone Basics</title>
+    <link rel="stylesheet" href="../css/Course_Content.css">
+</head>
+
+<body>
+    <button id="togglesidebar">≡</button>
+    <!-- الهيدر يحتوي على اسم الموقع) -->
+    <header class="header">
+        <nav id="navbar">
+
+            <div class="nav-links">
+                <a href="./home2.html" class="nav-btn1">Home</a>
+                <a href="./course essential.html" class="nav-btn2">Courses</a>
+                <a href="./quiz.html" class="nav-btn3">Quizzes</a>
+                <a href="./support.html" class="nav-btn4">Support</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!-- القائمة الجانبية -->
+        <div class="sidebar">
+            <h2>Chapters</h2>
+            <ul>
+                <li><a onclick="togglemenu('chapter1-menu')">1.Introduction</a></li>
+                <ul class="sup" id="chapter1-menu">
+                    <li><a href="#sub1">1.1 Introduction to Python</a></li>
+                    <li><a href="#sub2">1.2 What is Python?</a></li>
+                    <li><a href="#sub3">1.3 Why Learn Python?</a></li>
+                    <li><a href="#sub4">1.4 What Can You Do with Python?</a></li>
+                    <li><a href="#sub5">1.5  Who Uses Python?</a></li>
+                </ul>
+                <li><a onclick="togglemenu('chapter2-menu')">2.Basics</a></li>
+                <ul class="sup" id="chapter2-menu">
+                    <li><a href="#subb1">2.1 Variables in Python</a></li>
+                    <li><a href="#subb2">2.2 Printing Output</a></li>
+                    <li><a href="#subb3">2.3Conditional Statements (if/else)</a></li>
+                    <li><a href="#subb4">2.4 For Loop</a></li>
+
+                </ul>
+                <li><a onclick="togglemenu('chapter3-menu')">3. Function basics</a></li>
+
+                <ul class="sup" id="chapter3-menu">
+                    <li><a href="#subbb1">3.1 While Loop</a></li>
+                    <li><a href="#subbb2">3.2 Break & Continue</a></li>
+                    <li><a href="#subbb3">3.3 What is a Switch Case?</a></li>
+                    <li><a href="#subbb4">3.4 Using if...elif...else</a></li>
+                    <li><a href="#subbb5">3.5 What is a Function?</a></li>
+                    <li><a href="#subbb6">3.6 Why Use Functions?</a></li>
+                    <li><a href="#subbb7">3.7  How to Define a Function</a></li>
+                    <li><a href="#subbb8">3.8  How to Call a Function</a></li>
+                    <li><a href="#subbb9">3.9  Parameters and Arguments</a></li>
+                    <li><a href="#subbb10">3.9.1 Return Statement</a></li>
+                    <li><a href="#subbb11">3.9.2  Default Parameter Values</a></li>
+
+                </ul>
+
+                <li><a href="#chapter4">4. Classes</a></li>
+
+            </ul>
+        </div>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="content">
+            <h1>PYTHON BASICS</h1>
+
+            <section id="chapter1">
+                <h2>1. Introduction</h2>
+                <iframe width="50px" height="50px" src="https://www.youtube.com/embed/xiMHoMVWdI4?si=73YPbNC3LNtyu2XB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </iframe>
+                <p id="sub1"><strong>1.1 Introduction to Python </strong></p>
+                <p>The Python programming language has a wide range of syntactical constructions, standard library functions, and interactive development environment features. Fortunately, you can ignore most of that; you just need to learn enough to write
+                    some handy little programs.<br> You will, however, have to learn some basic programming concepts before you can do anything. Like a wizard in training, you might think these concepts seem arcane and tedious, but with some knowledge
+                    and practice, you’ll be able to command your computer like a magic wand and perform incredible feats.<br> This chapter has a few examples that encourage you to type into the interactive shell, also called the REPL (Read-Evaluate-Print
+                    Loop), which lets you run (or execute) Python instructions one at a time and instantly shows you the results. Using the interactive shell is great for learning what basic Python instructions do, so give it a try as you follow along.
+                    You’ll remember the things you do much better than the things you only read. </p>
+
+                <p id="sub2"><strong>1.2 What is Python?</strong></p>
+                <p>Python is a high-level, interpreted, general-purpose programming language that emphasizes readability and simplicity. Created by Guido van Rossum and first released in 1991, Python has grown into one of the most popular programming languages
+                    in the world today.<br> Whether you're building web applications, data analysis pipelines, artificial intelligence models, or simple scripts to automate tasks — Python can do it all<br>
+                </p>
+
+
+                <p id="sub3"><strong>1.3  Why Learn Python?</strong></p>
+                <p>Python's success comes from several powerful characteristics:<br> 1-Simplicity: Python's syntax is clean and resembles the English language, making it a great choice for beginners.<br> 2- Versatility: From web development with frameworks
+                    like Django and Flask, to data science with Pandas and NumPy, Python fits every domain.<br> 3- Massive Community: With a vast online community, countless tutorials, libraries, and tools are available for free.<br> 4- Cross-Platform:
+                    Python works on Windows, Mac, Linux — you name it.<br> Python is known for its clean, readable syntax. If you can read English, you can almost read Python code! Check this out:<br><span class="span1"><br>name = "Ali"<br>
+                        print("Hello, " + name)<br></span><br>That’s code? Yep. It’s that friendly!<br> No messy semicolons, no weird symbols, no scary stuff <br>That’s why Python is often taught as the first language in schools and universities.</p>
+
+                <p id="sub4"><strong>1.4  What Can You Do with Python? </strong></p>
+                <p> <br>1-Web Development Build powerful, dynamic websites and web APIs using frameworks like Django or Flask.<br>2- Data Science & Machine Learning Analyze data, visualize it with Matplotlib, and build predictive models using Scikit-learn,
+                    TensorFlow, or PyTorch.<br> 3-Automation and Scripting Automate boring tasks, rename files, scrape websites, and much more with just a few lines of code.<br> 4-Game Development Create 2D games using libraries like Pygame.<br> 5- Cybersecurity
+                    and Ethical Hacking Python is popular in cybersecurity for scripting tools and penetration testing.<br><br> Python Syntax: A Breath of Fresh Air<br> Unlike many programming languages, Python doesn’t use curly braces<span class="span2">{}</span>                    or semicolons ; to define blocks of code. It uses indentation, which makes your code more readable and clean. For example: python
+                    <br>
+                    <span class="span1"><br>def say_hello(name):<br> print(f"Hello, {name}!")<br>
+                    </span>
+                </p>
+                <br>
+                <p id="sub5"><strong>1.5  Who Uses Python?   </strong></p>
+
+                <p> Some of the biggest tech giants rely on Python daily, including:
+
+                    <br> Google
+
+                    <br> Netflix
+
+                    <br> Spotify
+
+                    <br> NASA
+
+                    <br> Instagram
+
+                    <br> Python is behind recommendation engines, space missions, AI breakthroughs, and much more! Let's start with a simple example, where the browser gets a simple (maybe even an empty) page from. The address is made up for this example,
+                    Python Philosophy: "There should be one—and preferably only one—obvious way to do it." Python embraces The Zen of Python, a collection of guiding principles for writing computer programs.<br> Type this into your Python shell to see
+                    it: python
+                    <span class="pan1">import this
+                    </span> </p>
+
+            </section>
+            <div class="btnquiz">
+                <button><a href="./Pyt_Quiz.html?section=1" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+            <!--شابتر اتنين-->
+            <section id="chapter2">
+                <h2>2. Basic </h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nn4qN90A7X4?si=najVrQdkIkuOhTbw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="subb1"><strong>2.1  Variables in Python</strong></p>
+                <p>Explanation: A variable is like a container that stores data in your program. Each variable has a name and a value.<br> In Python: You don’t need to define the type (Python figures it out for you).<br> You can change the value of a variable
+                    any time.<br> Variable names are case-sensitive <span class="span2">(name ≠ Name)</span>
+                    <br>
+                    <span class="span1">
+                        <br># Defining variables
+                        <br>    name = "Ali"        # String
+                        <br>  age = 25            # Integer
+                        <br>  height = 1.75       # Float
+                        
+                        <br>  # Printing the variables
+                        <br>  print(name)
+                        <br>   print(age)
+                        <br>   print(height)
+                        </span><br> And Data Type<br>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Example</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>int</code></td>
+                                <td>10, -3, 0</td>
+                                <td>Integer numbers</td>
+                            </tr>
+                            <tr>
+                                <td><code>float</code></td>
+                                <td>3.14, -0.5, 2.0</td>
+                                <td>Decimal numbers</td>
+                            </tr>
+                            <tr>
+                                <td><code>str</code></td>
+                                <td>"hello", 'Python'</td>
+                                <td>Text (string) values</td>
+                            </tr>
+                            <tr>
+                                <td><code>bool</code></td>
+                                <td>True, False</td>
+                                <td>Boolean values (logic)</td>
+                            </tr>
+                            <tr>
+                                <td><code>list</code></td>
+                                <td>[1, 2, 3]</td>
+                                <td>Ordered collection (mutable)</td>
+                            </tr>
+                            <tr>
+                                <td><code>tuple</code></td>
+                                <td>(1, 2, 3)</td>
+                                <td>Ordered collection (immutable)</td>
+                            </tr>
+                            <tr>
+                                <td><code>dict</code></td>
+                                <td>{"name": "Ali", "age": 20}</td>
+                                <td>Key-value pairs (dictionary)</td>
+                            </tr>
+                            <tr>
+                                <td><code>set</code></td>
+                                <td>{1, 2, 3}</td>
+                                <td>Unordered unique items</td>
+                            </tr>
+                            <tr>
+                                <td><code>NoneType</code></td>
+                                <td>None</td>
+                                <td>Represents absence of value</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+                <p id="subb2"><strong>2.2 Printing Output</strong></p>
+                <p>
+
+                    <br> Explanation:<br> We use the print() function to show text or values on the screen.<br> You can print:<br> Plain text <br>Variables Or combine both (using f-strings)
+
+                    <span class="span1"><br>name = "Sara"
+                        <br> age = 20
+                        
+                        <br>   # Print plain text
+                        <br>  print("Welcome to Python!")
+                        
+                        <br>  # Print a variable
+                        <br>  print(name)
+                        
+                        <br> # Print text + variable using f-string
+                        <br> print(f"My name is {name} and I am {age} years old.")
+                        </span>
+
+                    <br><br> Math Operations Explanation:<br> Python supports basic math operations like:<br> Addition. Subtraction. Multiplication. Division. Remainder. Power.
+                    <span class="span1"><br>a = 10
+                        <br>b = 3
+                      <br>  print(a + b)   # Addition => 13
+                      <br>  print(a - b)   # Subtraction => 7
+                      <br>  print(a * b)   # Multiplication => 30
+                      <br>  print(a / b)   # Division (float) => 3.33
+                      <br>  print(a // b)  # Floor Division => 3
+                      <br> print(a % b)   # Modulus => 1
+                      <br> print(a ** b)  # Power => 1000
+                        </span>
+                </p>
+
+                <p id="subb3"><strong>2.3 Conditional Statements (if/else)</strong></p>
+                <p>Explanation:<br> If statements let your program make decisions. You tell Python:<br> "If something is true, do this. Otherwise, do something else."
+                    <span class="span1"><br>age = 18
+
+                       <br> if age >= 18:
+                       <br> print("You're an adult.")
+                       <br>  else:
+                       <br>  print("You're still a minor.")
+                        </span>
+                    <br>Wanna continue with the same format?<br> Next up would be:<br> Loops (for & while)<br> Lists<br> Functions <br> Boolean logic & comparisons <br> Let me know if I should keep going or if you want something specific next!
+                </p>
+                <p id="subb4"><strong>2.4 For Loop</strong></p>
+                <p>
+                    Explanation:<br> The for loop is used when you want to repeat a block of code a specific number of times — especially when<br> looping through a sequence like a list or range of numbers. It automatically goes through each item in a
+                    sequence.
+                    <br>
+                    <span class="span1"><br># Loop from 0 to 4 (5 times)
+                       <br> for i in range(5):
+                       <br>     print(f"Number: {i}")
+                        </span><br> range(5) means: 0, 1, 2, 3, 4 Starts from 0 by default, stops before 5.<br> Looping through a list:
+                    <br> <span><br>fruits = ["apple", "banana", "mango"]
+
+                        <br> for fruit in fruits:
+                        <br>    print(f"I like {fruit}")
+                        </span>
+
+                </p>
+
+            </section>
+            <div class="btnquiz">
+                <button> <a href="./Pyt_Quiz.html?section=2" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+            <section id="chapter3">
+                <h2>3. The Basic In JavaScript</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zFVdMyr6CIo?si=Qxgm19v3dq5P-M7n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="subbb1"><strong>3.1 While Loop</strong></p>
+                <p> Explanation: The while loop keeps running as long as a condition is True.<br> It’s useful when you don’t know how many times you need to repeat something — the loop keeps going until the condition becomes False.<br>
+                    <span class="span1"><br>x = 0
+
+                        <br>while x < 5:
+                        <br> print(f"x is {x}")
+                           <br> x += 1  # increase x by 1 each time
+                        </span> Warning:<br> If you forget to update the variable (x += 1), the loop will run forever (infinite loop!). You can see that a while statement looks similar to an if statement. The difference is in how they
+                    behave. At the end of an if clause, the program execution continues after the if statement. But at the end of a while clause, the program execution jumps back to the start of the while statement. The while clause is often called the
+                    while loop or just the loop. Let’s look at an if statement and a while loop that use the same condition and take the<br>
+                    <span class="span1"> <br>spam = 0
+                        <br> while spam < 5:
+                        <br> print('Hello, world.')
+                           <br> spam = spam + 1</span><br> These statements are similar—both if and while check the value of spam, and if it’s less than 5, they print a message.<br> But when you run these two code snippets, something
+                    very different happens for each one. For the if statement, the output is simply "Hello, world.". But for the while statement, it’s "Hello, world." repeated five times! Take a look at the flowcharts for these two pieces of code.<br>
+                </p>
+
+                <p id="subbb2"><strong>3.2 Break & Continue  </strong></p>
+                <p> break: Stops the loop completely when a condition is met. <br>Example:<span class="span1"><br>for i in range(10):
+                   <br> if i == 5:
+                       <br> break  # exit the loop
+                   <br> print(i)
+                </span>You can view the execution of this program at https://autbor.com/yourname/. First, the program sets the name variable ➊ to an empty string. This is so that the name != 'your name' condition will evaluate to True and the program
+                    execution will enter the while loop’s clause ➋. The code inside this clause asks the user to type their name, which is assigned to the name variable ➌. Since this is the last line of the block, the execution moves back to the start
+                    of the while loop and reevaluates the condition. If the value in name is not equal to the string 'your name', then the condition is True, and the execution enters the while clause again. But once the user types your name, the condition
+                    of the while loop will be 'your name' != 'your name', which evaluates to False. The condition is now False, and instead of the program execution reentering the while loop’s clause, Python skips past it and continues running the rest
+                    of the program ➍.
+                </p>
+                <p id="subbb3"><strong>3.3 What is a Switch Case?</strong></p>
+                <p>In many programming languages, a switch case is used to replace multiple if...elif...else statements — it makes the code cleaner when you're comparing one variable to multiple possible values.<br><span class="span1">
+                     <br>switch(day) {
+                  <br>  case 1:
+                  <br>  printf("Monday");
+                  <br>  break;
+                  <br> case 2:
+                  <br> printf("Tuesday");
+                  <br> break;
+                  <br>  ...
+                    <br>  }
+                  </span> No Built-in switch in Python! But don’t worry!<br> Python gives us smarter ways to achieve the same thing:
+
+
+
+                </p>
+
+                <p id="subbb4"><strong>3.4 Using if...elif...else</strong></p>
+                <p>While only one of the if or else clauses will execute, you may have a case where you want one of many possible clauses to execute. The elif statement is an “else if” statement that always follows an if or another elif statement. It provides
+                    another condition that is checked only if all of the previous conditions were False. In code, an elif statement always consists of the following:
+                    <br><span class="span1"><br>day = 3
+
+                        <br> if day == 1:
+                        <br>     print("Monday")
+                        <br> elif day == 2:
+                        <br>     print("Tuesday")
+                        <br> elif day == 3:
+                        <br>     print("Wednesday")
+                        <br> else:
+                        <br>     print("Invalid day")
+                        </span><br> Option 2: Using Dictionaries as Switch Alternative ( Most Pythonic Way)<br> Explanation: Use a dictionary where keys represent cases, and values are results or even function<br>
+                    <span class="span1"><br>def get_day_name(day):
+                        <br>switch = {
+                            <br> 1: "Monday",
+                            <br> 2: "Tuesday",
+                            <br> 3: "Wednesday",
+                            <br> 4: "Thursday",
+                            <br> 5: "Friday"
+                            <br>   }
+                            <br>  return switch.get(day, "Invalid day")
+                    
+                            <br> print(get_day_name(3))  # Output: Wednesday
+                    </span> </p>
+
+                <p id="subbb5"><strong>3.5 What is a Function?</strong></p>
+                <p> A function is a reusable block of code that performs a specific task. Instead of writing the same code over and over again, you define it once and then call it whenever needed.<br> Think of a function as a mini-program inside your program.
+                    You give it input, it gives you output.<br> Explanation:<br> A function is a block of code that performs a task. You define it once and use it many time
+
+                    <span class="span1"><br># Defining a function
+                        <br>  def say_hello():
+                        <br> print("Hello, world!")
+                        
+                        <br> # Calling the function
+                        <br> say_hello()
+                        </span> <br> You’re already familiar with the print(), input(), and len() functions from the previous chapters. Python provides several built-in functions like these, but you can also write your own functions.
+                    A function is like a miniprogram within a program. To better understand how functions work, let’s create one. Enter this program into the file editor and save it as helloFunc.py:<br>
+                    <span class="span1"><br>➊ def hello():
+                        <br>   ➋ print('Howdy!')
+                        <br>   print('Howdy!!!')
+                        <br>   print('Hello there.')
+                    
+                        <br> ➌ hello()
+                        <br>    hello()
+                        <br>   hello()</span></p>
+                <br>
+                <br>
+                <p id="subbb6"><strong>3.6 Why Use Functions?</strong></p>
+                <p> Explanation:<br> Functions save time, avoid repetition, and make your code clean and organized<br><span class="span1"><br># Instead of repeating the same code
+                    <br>def greet():
+                    <br>  print("Welcome to Python!")
+                    
+                    <br> greet()
+                    <br> greet()
+                    <br>  greet()
+                    </span>
+
+                </p>
+                <p id="subbb7"><strong>3.7  How to Define a Function</strong></p>
+                <p> Explanation: Use the def keyword, then the function name and parentheses.<br> Code Example<br><span class="span1"><br>def print_name():
+                    <br> print("My name is Python.")
+                
+                    <br> print_name()
+                </span><br>Define, Call, Pass, Argument, Parameter The terms define, call, pass, argument, and parameter can be confusing. Let’s look at a code example to review these terms:<br><span class="span1"><br> def sayHello(name):
+                    <br>print('Hello, ' + name)
+            <br>  sayHello('Al')</span>To define a function is to create it, just like an assignment statement like spam = 42 creates the spam variable. The def statement defines the sayHello() function ➊. The sayHello('Al') line ➋ calls the now-created
+                    function, sending the execution to the top of the function’s code. This function call is also known as passing the string value 'Al' to the function. A value being passed to a function in a function call is an argument. The argument
+                    'Al' is assigned to a local variable named name. Variables that have arguments assigned to them are parameters.
+                </p>
+                <p id="subbb8"><strong>3.8  How to Call a Function</strong></p>
+                <p>Just type the function’s name followed by parentheses to run it.<br> Code Example:<br><span class="span1"><br>def show_info():
+                    <br>print("This is a function.")
+                
+                    <br> # Function call
+                    <br> show_info()
+                </span>The terms define, call, pass, argument, and parameter can be confusing. Let’s look at a code example to review.
+                </p>
+                <p id="subbb9"><strong>3.9 Parameters and Arguments</strong></p>
+                <p>Functions can take inputs (called parameters) and use them inside.<br><span class="span1"><br>def greet_user(name):
+                    <br>  print(f"Hello, {name}!")
+                
+                    <br>greet_user("Ali")
+                    <br>greet_user("Sara")
+                </span><br>Often, all you need to know about a function are its inputs (the parameters) and output value; you don’t always have to burden yourself with how the function’s code actually works. When you think about functions in this high-level
+                    way, it’s common to say that you’re treating a function as a “black box.” This idea is fundamental to modern programming. Later chapters in this book will show you several modules with functions that were written by other people. While
+                    you can take a peek at the source code if you’re curious, you don’t need to know how these functions work in order to use them. And because writing functions without global variables is encouraged, you usually don’t have to worry about
+                    the function’s code interacting with the rest of your program.
+
+                </p>
+
+
+
+
+                <p id="subbb10"><strong>3.9.1 Return Statement</strong></p>
+                <p>When you call the len() function and pass it an argument such as 'Hello', the function call evaluates to the integer value 5, which is the length of the string you passed it. In general, the value that a function call evaluates to is called
+                    the return value of the function. When creating a function using the def statement, you can specify what the return value should be with a return statement.<br>
+                    <span class="span1"><br> def getAnswer(answerNumber):
+                        <br> if answerNumber == 1:
+                        <br>        return 'It is certain'
+                        <br>    elif answerNumber == 2:
+                        <br>        return 'It is decidedly so'
+                        <br>    elif answerNumber == 3:
+                        <br>        return 'Yes'
+                               <br>    elif answerNumber == 4:
+                                       <br>       return 'Reply hazy try again'
+                                       <br>  elif answerNumber == 5:
+                                       <br>     return 'Ask again later'
+                                       <br>   elif answerNumber == 6:
+                                       <br>       return 'Concentrate and ask again'
+                                       <br>   elif answerNumber == 7:
+                                       <br>       return 'My reply is no'
+                                       <br>      elif answerNumber == 8:
+                                       <br>          return 'Outlook not so good'
+                               <br>     elif answerNumber == 9:
+                               <br>  return 'Very doubtful'
+                    
+                               <br>  ➍ r = random.randint(1, 9)
+                               <br>  ➎ fortune = getAnswer(r)
+                               <br>  ➏ print(fortune)</span>You can view the execution of this program at
+                    <a href="https://automatetheboringstuff.com/2e/chapter3/">https://automatetheboringstuff.com/2e/chapter3/</a> . When this program starts, Python first imports the random module ➊. Then the getAnswer() function is defined ➋. Because
+                    the function is being defined (and not called), the execution skips over the code in it. Next, the random.randint() function is called with two arguments: 1 and 9 ➍. It evaluates to a random integer between 1 and 9 (including 1 and
+                    9 themselves), and this value is stored in a variable named r.<br>
+
+                </p>
+
+                <p id="subbb11"><strong>3.9.2 Default Parameter Values</strong></p>
+                <p>You can give a default value to a parameter in case no value is provided.<br><span class="span1"><br>def spam():
+                    <br>    ➊ eggs = 31337
+                    <br> spam()
+                    <br>  print(eggs)<br></span> The error happens because the eggs variable exists only in the local scope created when spam() is called ➊. Once the program execution returns from spam, that local scope is destroyed, and there is no longer
+                    a variable named eggs. So when your program tries to run print(eggs), Python gives you an error saying that eggs is not defined. This makes sense if you think about it; when the program execution is in the global scope, no local scopes
+                    exist, so there can’t be any local variables. This is why only global variables can be used in the global scope.<br>
+                </p>
+            </section>
+            <div class="btnquiz">
+                <button><a href="./Pyt_Quiz.html?section=3" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+        </main>
+        <!------------------------>
+        <!------------------------>
+        <!------------------------>
+        <!------------------------>
+        <script>
+            function togglemenu(menuid) {
+                let menu = document.getElementById(menuid);
+                if (menu.style.display === "none" || menu.style.display === "") {
+                    document.querySelectorAll('.sup').forEach(m => m.style.display = "none");
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none"
+                }
+            }
+        </script>
+        <script>
+            document.getElementById("togglesidebar").addEventListener("click", function() {
+                let sidebar = document.querySelector(".sidebar")
+                let content = document.querySelector(".content")
+                if (sidebar.classList.contains("closed")) {
+                    sidebar.classList.remove("closed");
+                    content.classList.remove("shifted");
+                } else {
+                    sidebar.classList.add("closed");
+                    content.classList.add("shifted");
+                }
+            })
+        </script>
+
+        <script>
+            window.addEventListener("scroll", function() {
+                const navbar = document.getElementById("navbar");
+                if (window.scrollY > 100) {
+                    navbar.classList.add("navbar");
+                } else {
+                    navbar.classList.remove("navbar");
+                }
+            });
+        </script>
+        <script src="./java.js"></script>
+</body>
+
+</html>
+
+</html>

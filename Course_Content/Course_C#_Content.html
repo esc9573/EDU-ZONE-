@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Basics</title>
+    <link rel="stylesheet" href="../css/Course_Content.css">
+</head>
+
+<body>
+    <button id="togglesidebar">≡</button>
+    <!-- الهيدر يحتوي على اسم الموقع) -->
+    <header class="header">
+        <nav id="navbar">
+
+            <div class="nav-links">
+                <a href="./home2.html" class="nav-btn1">Home</a>
+                <a href="./course essential.html" class="nav-btn2">Courses</a>
+                <a href="./quiz.html" class="nav-btn3">Quizzes</a>
+                <a href="./support.html" class="nav-btn4">Support</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!-- القائمة الجانبية -->
+        <div class="sidebar">
+            <h2>Chapters</h2>
+            <ul>
+                <li><a onclick="togglemenu('chapter1-menu')">1.Introduction</a></li>
+                <ul class="sup" id="chapter1-menu">
+                    <li><a href="#sub1">1.1 Introduction to C#</a></li>
+                    <li><a href="#sub2">1.2 Key Features of C#</a></li>
+                    <li><a href="#sub3">1.3 What Comprises a C# Program? </a></li>
+                    <li><a href="#sub4">1.4 Simple Data Processing </a></li>
+                    <li><a href="#sub5">1.5 using System </a></li>
+                </ul>
+                <li><a onclick="togglemenu('chapter2-menu')">2.Basics</a></li>
+                <ul class="sup" id="chapter2-menu">
+                    <li><a href="#subb1">2.1 If Statement (Conditional Logic)</a></li>
+                    <li><a href="#subb2">2.2 Switch Statement (Multi-Case Selection)</a></li>
+                    <li><a href="#subb3">2.3 While Loop (Indefinite Iteration)</a></li>
+                    <li><a href="#subb4">2.4  For Loop</a></li>
+
+                </ul>
+                <li><a onclick="togglemenu('chapter3-menu')">3. Function basics</a></li>
+
+                <ul class="sup" id="chapter3-menu">
+                    <li><a href="#subbb1">3.1 What is a Function in C#?</a></li>
+                    <li><a href="#subbb2">3.2 Objects and Structures</a></li>
+                    <li><a href="#subbb3">3.3 Why Use Functions?</a></li>
+                    <li><a href="#subbb4">3.4 Anatomy of a Function in C#</a></li>
+                    <li><a href="#subbb5">3.5 Calling a Function</a></li>
+                    <li><a href="#subbb6">3.6 Types of Functions</a></li>
+                    <li><a href="#subbb7">3.7  Functions with No Parameters and No Return</a></li>
+                    <li><a href="#subbb8">3.8  Static vs Instance Functions</a></li>
+                    <li><a href="#subbb9">3.9  Parameters and Arguments</a></li>
+                    <li><a href="#subbb10">3.9.1 Return Statement</a></li>
+                    <li><a href="#subbb11">3.9. Combine Functions for Power</a></li>
+
+                </ul>
+
+                <li><a href="#chapter4">4. Classes</a></li>
+
+            </ul>
+        </div>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="content">
+            <h1>C# BASICS</h1>
+
+            <section id="chapter1">
+                <h2>1. Introduction</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ji4Sz529lhA?si=gAMiof15psGXZpCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </iframe>
+                <p id="sub1"><strong>1.1 Introduction to C# </strong></p>
+                <p>We are going to learn a language called C# (pronounced C sharp). If you ever make the mistake of calling the language C hash you will show your ignorance straight away! C# is a very flexible and powerful programming language with an interesting
+                    history. It was developed by Microsoft Corporation for a variety of reasons, some technical, some political and others marketing. C# bears a strong resemblance to the C++ and Java programming languages, having borrowed (or improved)
+                    features provided by these languages. The origins of both Java and C++ can be traced back to a language called C, which is a highly dangerous and entertaining language which was invented in the early 1970s. C is famous as the language
+                    the UNIX operating system was written in, and was specially designed for this.
+                    <br> Definition of C# <br> C# (pronounced "C Sharp") is a modern, high-level programming language developed by Microsoft in 2000. It is an object-oriented, strongly typed language designed for building a wide range of applications,
+                    including desktop, web, mobile, and gaming applications. C# is part of the .NET ecosystem and is widely used for developing Windows applications, cloud services, and backend systems.</p>
+
+                <p id="sub2"><strong>1.2 Key Features of C#</strong></p>
+                <p>C# offers several powerful features, such as: Object-Oriented Programming (OOP): Supports classes, inheritance, polymorphism, and encapsulation.<br> Automatic Memory Management: Uses garbage collection to handle memory allocation and deallocation.
+                    Type Safety: Prevents type-related errors at compile time. Asynchronous Programming: Supports async and await for efficient multitasking. Cross-Platform Development: Works on Windows, Linux, and macOS via .NET Core.
+                </p>
+
+
+                <p id="sub3"><strong>1.3 What Comprises a C# Program? </strong></p>
+                <p> If your mum wanted to tell you how to make your favourite fruitcake she’d write the recipe down on a piece of paper. The recipe would be a list of ingredients followed by a sequence of actions to perform on them. A program can be regarded
+                    as a recipe, but written for a computer to follow, not a cook. The ingredients will be values (called variables) that you want your program to work with. The program itself will be a sequence of actions (called statements) that are
+                    to be followed by the computer.<br> Rather than writing the program down on a piece of paper you instead put it into a file on the computer, often called a source file. This is what the compiler acts on. A source file contains three
+                    things:
+                    <br>1- instructions to the compiler <br>2- information about the structures which will hold the data to be stored and manipulated. <br>3- instructions which manipulate the data.</p>
+
+                <p id="sub4"><strong>1.4  Simple Data Processing </strong></p>
+                <p> n this chapter we are going to create a genuinely useful program (particularly if you are in the double glazing business).<br> We will start by creating a very simple solution and investigating the C# statements that perform basic data
+                    processing. Then we will use additional features of the C# language to improve the quality of the solution we are producing.<br> The Program Example<br> Perhaps the best way to start looking at C# is to jump straight in with our first
+                    ever C# program. Here it is:
+                    <span class="span1"><br>using System;
+                        <br>  class GlazerCalc
+                        <br>   {
+                            <br>   static void Main()
+                            <br>   {
+                                <br>   double width, height, woodLength, glassArea;
+                                <br>   string widthString, heightString;
+                                <br>   widthString = Console.ReadLine();
+                        <br>    width = double.Parse(widthString);
+                        <br>    heightString = Console.ReadLine();
+                        <br>    height = double.Parse(heightString);
+                        <br>     woodLength = 2 * ( width + height ) * 3.25 ;
+                        <br>     glassArea = 2 * ( width * height ) ;
+                        <br>     Console.WriteLine ( "The length of the wood is " +
+                        <br>      woodLength + " feet" ) ;
+                        <br>    Console.WriteLine( "The area of the glass is " +
+                        <br>    glassArea + " square metres" ) ;
+                        <br>    }
+                        <br>    }</span>Code Sample 01 GlazerCalc Program This is a valid program. If you gave it to a C# compiler it would compile, and you could run it. The actual work is done by the two lines that I have highlighted.
+                    Broadly speaking the stuff before these two lines is concerned with setting things up and getting the values in to be processed. The stuff after the two lines is concerned with displaying the answer to the user. </p>
+                <br>
+                <p id="sub5"><strong>1.5 using System   </strong></p>
+
+                <p> C# is widely used in: <br>Desktop Applications: Built with Windows Forms or WPF.<br> Web Development: Using ASP.NET for backend services.<br> Game Development: Popular in Unity game engine.<br> Mobile Apps: Through Xamarin for cross-platform
+                    apps. <br>Cloud & Microservices: Using Azure and .NET for scalable solutions.<br>This is an instruction to the C# compiler to tell it that we want to use things from the System namespace. A namespace is a place where particular names
+                    have meaning.<br> We have namespaces in our conversations too, if I am using the "Football" namespace and I say “That team is really on fire” I'm saying something good. If I am using the "Firefighter" namespace I'm saying something
+                    less good. In the case of C# the System namespace is where lots of useful things are described. One of these useful things provided with C# is the Console class which will let me write things which will appear on the screen in front
+                    of the user. If I want to just refer to this as Console I have to tell the compiler I'm using the System namespace.<br> This means that if I refer to something by a particular name the compiler will look in System to see if there is
+                    anything matching that name.<br> We will use other namespaces later on.
+
+
+                </p>
+
+            </section>
+            <div class="btnquiz">
+                <button><a href="./Course_C_Quiz.html?section=1" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+            <!--شابتر اتنين-->
+            <section id="chapter2">
+                <h2>2. Basic </h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/L9ZEdKXhAOI?si=aOJfQnTht4eN4V56" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="subb1"><strong>2.1 If Statement (Conditional Logic)</strong></p>
+                <p> What is an if statement in C# and how does it work?,<br> Answer: The if statement executes a block of code only if a specified condition is true.<br><span class="span1">
+                     <br>int age = 18;
+                   <br> if (age >= 18) 
+                   <br>{
+                    <br>      Console.WriteLine("You are an adult.");
+                    <br>   }
+                    <br>   else 
+                    <br>   {
+                        <br>       Console.WriteLine("You are a minor.");
+                        <br>   }</span><br>When you come to perform the actual selection you end up with code which looks a bit like this:<br><span class="span1"><br>int selection ;
+                            <br>  selection = readInt ( "Window Type : ", 1, 3 ) ;
+                            <br>    if ( selection == 1 )
+                            <br>    {
+                                <br>  handleCasement();
+                                <br>   }
+                                <br>   else
+                                <br>  {
+                                    <br>  if ( selection == 2 )
+                                    <br> {
+                                        <br>  handleStandard();
+                                        <br>  }
+                                        <br>   else
+                                        <br>    {
+                                            <br>     if ( selection == 3 )
+                                            <br>     {
+                                                <br>     handlePatio() ;
+                            <br>     }
+                            <br>      else
+                            <br>        {
+                                <br>        Console.WriteLine ( "Invalid number" );
+                                <br>        }
+                                <br>        }
+                                <br>        }
+                            </span>This would work OK, but is rather clumsy. You have to write a large number of if constructions to activate each option.
+
+                </p>
+                <p id="subb2"><strong>2.2 Switch Statement (Multi-Case Selection)</strong></p>
+                <p>
+                    We now know nearly everything you need to know about constructing a program in the C# language.<br> You may find it rather surprising, but there is really very little left to know about programming itself. Most of the rest of C# is
+                    concerned with making the business of programming simpler. A good example of this is the switch construction.<br> How does a switch statement simplify multiple conditions?<br> Answer: The switch statement selects one of many code blocks
+                    to execute based on a value.<br>
+                    <span class="span1"><br>string day = "Monday";
+                        <br> switch (day) 
+                        <br> {
+                            <br> case "Monday":
+                            <br>     Console.WriteLine("Start of the week!");
+                            <br>      break;
+                            <br>    case "Friday":
+                            <br>        Console.WriteLine("Weekend is near!");
+                            <br>        break;
+                            <br>       default:
+                            <br>         Console.WriteLine("Another day.");
+                            <br>          break;
+                            <br>  }</span>More efficient than multiple if-else statements.<br> Requires break to exit each case.
+
+                </p>
+
+                <p id="subb3"><strong>2.3 While Loop (Indefinite Iteration)</strong></p>
+                <p>Question: What is a while loop, and when should it be used?<br> Answer: A while loop runs as long as a condition remains true.<br> Example:<span class="span1"> <br>int count = 0;
+                    <br>while (count  3) 
+                    <br>  {
+                        <br> Console.WriteLine("Count: " + count);
+                        <br>  count++;
+                        <br> }</span>Practical Example: Countdown<br><span class="span1"><br>int counter = 5;
+                            <br>   while (counter > 0)
+                            <br>  {
+                                <br>     Console.WriteLine($"Countdown: {counter}");
+                                <br>     counter--; // Decrement to eventually exit loop
+                                <br>   }</span><br>Example
+                    <span class="span1"><br>using System;
+                        <br>class GlazerCalc
+                        <br> {
+                            <br>   static void Main()
+                            <br> {
+                                <br> double width, height, woodLength, glassArea;
+                                <br>  const double MAX_WIDTH = 5.0 ;
+                                <br>  const double MIN_WIDTH = 0.5 ;
+                                <br>          const double MAX_HEIGHT = 3.0 ;
+                                <br>        const double MIN_HEIGHT = 0.75 ;
+                                <br>        string widthString, heightString;
+                                <br>          do {
+                                    <br>          Console.Write ( "Give the width of the window between " +
+                                    <br>         MIN_WIDTH + " and " + MAX_WIDTH + " :" );
+                                    <br>         widthString = Console.ReadLine();
+                                    <br>         width = double.Parse(widthString);
+                                    <br>         } while ( width < MIN_WIDTH || width > MAX_WIDTH ) ;
+                                    <br>         do {
+                                        <br>        Console.Write ( "Give the height of the window between " +
+                                        <br>     MIN_HEIGHT + " and " + MAX_HEIGHT + " :" );
+                        <br>       heightString = Console.ReadLine();
+                        <br>     height = double.Parse(heightString);
+                        <br>     } while ( height < MIN_HEIGHT || height > MAX_HEIGHT );
+                        <br>      woodLength = 2 * ( width + height ) * 3.25 ;
+                        <br>    glassArea = 2 * ( width * height ) ;
+                        <br>      Console.WriteLine ( "The length of the wood is " +
+                        <br>      woodLength + " feet" ) ;
+                        <br>      Console.WriteLine( "The area of the glass is " +
+                        <br>      glassArea + " square metres" ) ;
+                        <br>      }
+                        <br>     }</span></p>
+                <p id="subb4"><strong>2.4 For Loop</strong></p>
+                <p>
+                    How does a for loop work in C#?<br>A for loop repeats a block of code a specific number of times.<br> Example:<span class="span1"><br>for (int i = 0; i < 5; i++) 
+                        <br>{
+                          <br>  Console.WriteLine("Iteration: " + i);
+                        <br>}</span>Consists of initialization, condition, and increment. Used when the number of iterations is known.<br> Please do not go any further down this time round the loop. Go back to the top of the loop, do all the updating
+                    and stuff and go around if you are supposed to. In the following program the bool variable Done_All_We_Need_This_Time is set true when we have gone as far down the loop as we need to.<br>
+                    <span class="span1"><br>for ( item = 1 ; item < Total_Items ; item=item+1 )
+                        <br> {
+                            <br> .....
+                            <br> item processing stuff
+                            <br>  ....
+                        <br> if (Done_All_We_Need_This_Time) continue ;
+                        <br>  ....
+                        <br> additional item processing stuff
+                        <br>  ....
+                        <br>  }
+                        </span><br>Consists of initialization, condition, and increment. Used when the number of iterations is known. </p>
+
+            </section>
+            <div class="btnquiz">
+                <button> <a href="./Course_C_Quiz.html?section=2" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+            <section id="chapter3">
+                <h2>3. The Basic In C#</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/BFVWr8xW6Bs?si=ZATkJsDhPrfLp9F5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="subbb1"><strong>3.1  What is a Function in C#?</strong></p>
+                <p>In C#, functions are more commonly called methods, and they are one of the most important building blocks in the language. They allow you to group lines of code into one reusable block that you can run (or "call") whenever you need it.
+                    Imagine you’re baking a cake . Instead of repeating all the steps every time you bake, you write a recipe. That recipe is like a function. You call it whenever you need it. In C#, a function lives inside a class, and it can perform
+                    actions, return values, or do both.
+
+
+                    <span class="span1"><br>returnType FunctionName(parameters)
+                        <br>    {
+                            <br> // code to execute
+                            <br>    return value; // if returnType is not void
+                            <br>   }
+                        </span>
+
+                </p>
+
+                <p id="subbb2"><strong>3.2  Objects and Structures  </strong></p>
+                <p>In C# objects and structures have a lot in common. They can both hold data and contain methods. However, there is a crucial difference between the two. Structures are managed in terms of value whereas objects are managed in terms of reference.
+                    It is very important that you understand the distinction between the two, for it has a big impact on the way that they are used.<br>
+                    <span class="span1"><br>struct AccountStruct
+                        <br>  {
+                            <br> public string Name ;
+                            <br> } ;
+                            <br> class StructsAndObjectsDemo
+                            <br> {
+                                <br>  public static void Main ()
+                                <br>  {
+                                    <br>  AccountStruct RobsAccountStruct ;
+                                    <br>   RobsAccountStruct.Name = "Rob";
+                                    <br>   Console.WriteLine ( RobsAccountStruct.Name );
+                                    <br>   }
+                                    <br>   }
+                        </span> </p>
+                <p id="subbb3"><strong>3.3 Why Use Functions?</strong></p>
+                <p>Using functions is not just good programming practice, it's essential. Here’s why: <br>1. Reusability If you need to do the same task multiple times, you don’t want to copy and paste the same code everywhere. Just write a function once,
+                    and call it whenever you need it.<br> 2. Modularity Functions help break your program into small, understandable pieces. Instead of one long piece of code that does everything, you have smaller blocks that each do one thing. This makes
+                    the code easier to read, test, and debug. <br>3. Maintainability If a bug appears in a calculation that’s used many times, you only need to fix the bug inside the function. All parts of your program that use that function will now
+                    use the corrected version.<br> 4. Clarity Naming a function gives meaning to what the code does. For example: CalculateSalary() is much clearer than just a chunk of math operations sitting in your Main().
+
+                    <br>
+
+                </p>
+
+                <p id="subbb4"><strong>3.4  Anatomy of a Function in C#</strong></p>
+                <p>Let’s break down what a function is made of in C#:<br><span class="span1"><br>return_type FunctionName(parameter1Type param1, parameter2Type param2, ...)
+                    <br>  {
+                        <br> // Function body (statements)
+                        <br>  return value; // if not void
+                        <br>}
+                    </span>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Part</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>return_type</code></td>
+                                <td>The type of value the function will return (e.g., <code>int</code>, <code>string</code>, <code>void</code> if nothing is returned)</td>
+                            </tr>
+                            <tr>
+                                <td><code>FunctionName</code></td>
+                                <td>The name you give to the function so you can call it later.</td>
+                            </tr>
+                            <tr>
+                                <td><code>parameters</code></td>
+                                <td>Inputs (arguments) you pass into the function so it can work with different values.</td>
+                            </tr>
+                            <tr>
+                                <td><code>return</code></td>
+                                <td>The keyword used to send a result back to the caller. Not needed if return type is <code>void</code>.</td>
+                            </tr>
+                        </tbody>
+                    </table><br><span class="span1">int Multiply(int x, int y) <br>{ return x * y; }</span>
+
+                </p>
+
+                <p id="subbb5"><strong>3.5  Calling a Function</strong></p>
+                <p> You don’t just write a function — you need to call it to use it.<br><span class="span1"><br>int result = Multiply(3, 4);
+                   <br> Console.WriteLine(result); // Output: 12
+                    </span>When you call Multiply(3, 4), it executes the code inside and gives you the result 12.<br></p>
+                <br>
+                <br>
+                <p id="subbb6"><strong>3.6 Types of Functions</strong></p>
+                <p>In C#, there are several types of functions based on how you define and use them.<br> 1. Functions with Parameters and Return Value <br>These take input and return output.<br><span class="span1"><br>int Add(int a, int b)
+                    <br>  {
+                        <br>     return a + b;
+                        <br> }
+                    </span>Used when you want to calculate and return a value.<br>
+
+
+                    <br> Functions with Parameters and No Return Value<br>These take input, do something (like print), but don’t return anything.<br><span class="span1">  <br> void PrintName(string name)
+                     <br>   {
+                        <br>      Console.WriteLine("Your name is " + name);
+                        <br>   }
+                        </span> Used for displaying messages, logging, or any action that doesn’t produce a value.<br></p>
+                <p id="subbb7"><strong>3.7  Functions with No Parameters and No Return</strong></p>
+                <p>Just performs a fixed task when called.<br><span class="span1"><br>void SayHello()
+                    <br>{
+                        <br>    Console.WriteLine("Hello!");
+                        <br> }
+                    </span>Used when the action is static and doesn’t depend on input.
+                </p>
+                <p id="subbb8"><strong>3.8 Static vs Instance Functions </strong></p>
+                <p> Static Functions Belong to the class, not to any specific object.<br> Called using the class name.<br> Often used in Main() or helper utilities.<br>
+                    <Span class="span1"><br>static void Greet() {
+                      <br>  Console.WriteLine("Hi there!");
+                  <br>  }
+                    </Span>Call with: ClassName.Greet();
+
+                </p>
+                <p id="subbb9"><strong>3.9  Arguments and Parameters</strong></p>
+                <p>When you read about C# you will find the words parameter and argument used interchangeably. This is actually not quite right. Understanding the difference will make C# documentation and error messages seem more sensible and might even
+                    give you a feeling of superiority over lessor programmers who don’t know the truth. A parameter is the special kind of variable that is defined in the method header and used inside that method to represent the value that was fed into
+                    the method call.<br><span class="span1"><br>static int sillyReturnPlus ( int i)
+                        <br> {
+                            <br> i = i + 1;
+                            <br> Console.WriteLine ( "i is : " + i ) ;
+                            <br>  return i;
+                            <br>  }</span>The method sillyReturnPlus above has a single parameter, which is of type integer and has the identifier i.
+                </p>
+
+
+                <p id="subbb10"><strong>3.9.1 Common Function Scenarios</strong></p>
+                <p>What Are Common Functions? Common functions are reusable blocks of code that perform basic or frequently used operations. They're called "common" because: They solve everyday programming problems.<br> They can be used in many situations.<br>                    They simplify your code by keeping things DRY (Don’t Repeat Yourself).<br> These functions typically fall into these categories: <br>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Scenario</th>
+                                <th>Function Signature</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>No input, just show message</td>
+                                <td><code>void ShowMenu()</code></td>
+                                <td>Shows a menu or UI component</td>
+                            </tr>
+                            <tr>
+                                <td>Input and calculate something</td>
+                                <td><code>int Square(int x)</code></td>
+                                <td>Returns a calculated value</td>
+                            </tr>
+                            <tr>
+                                <td>Handle user input</td>
+                                <td><code>void ReadInput(string prompt)</code></td>
+                                <td>Asks user and reads input</td>
+                            </tr>
+                            <tr>
+                                <td>Logical check</td>
+                                <td><code>bool IsEven(int num)</code></td>
+                                <td>Returns true or false</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    Input / Output Functions These functions handle user interaction, usually with Console.ReadLine() and Console.WriteLine().<span class="span1"><br>void GreetUser()
+                       <br> {
+                        <br>    Console.Write("Enter your name: ");
+                        <br>    string name = Console.ReadLine()
+                        <br>     Console.WriteLine("Welcome, " + name + "!");
+                        <br>  } <br>// Math Oprating <br>double CalculateArea(double radius)
+                       <br> {
+                       <br>     return Math.PI * radius * radius;
+                       <br> }<br>// tring Manipulation Functions<br><br>string Capitalize(string input)
+                      <br> {
+                        <br>    if (string.IsNullOrEmpty(input)) return input;
+                        <br>      return char.ToUpper(input[0]) + input.Substring(1).ToLower();
+                        <br>   }
+                       
+                        </span>
+                </p>
+
+                <p id="subbb11"><strong>3.9.2 Combine Functions for Power</strong></p>
+                <p>You can make small common functions and combine them to build bigger ones. Example: Use CanVote() inside a larger function that registers users:<br><span class="span1"> <br>void RegisterUser()
+                   <br> {
+                    <br>   Console.Write("Enter your age: ");
+                    <br>   int age = int.Parse(Console.ReadLine());
+                    <br>
+                    <br>    if (CanVote(age))
+                    <br>     {
+                        <br>         Console.WriteLine("Registration complete. You can vote!");
+                        <br>      }
+                        <br>      else
+                        <br>       {
+                            <br>           Console.WriteLine("Sorry, you must be 18+ to register.");
+                            <br>        }
+                            <br>    }
+                    </span><br>
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Function Type</th>
+                                <th>Example</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Input/Output</td>
+                                <td><code>GreetUser()</code></td>
+                                <td>Read user input, show messages</td>
+                            </tr>
+                            <tr>
+                                <td>Math</td>
+                                <td><code>CalculateArea(double r)</code></td>
+                                <td>Perform calculations</td>
+                            </tr>
+                            <tr>
+                                <td>String</td>
+                                <td><code>Capitalize(string s)</code></td>
+                                <td>Format text</td>
+                            </tr>
+                            <tr>
+                                <td>Validation</td>
+                                <td><code>IsEven(int n)</code></td>
+                                <td>Check a condition</td>
+                            </tr>
+                            <tr>
+                                <td>Utility</td>
+                                <td><code>Swap(ref a, ref b)</code></td>
+                                <td>Code organization / reuse</td>
+                            </tr>
+                            <tr>
+                                <td>Logic</td>
+                                <td><code>CanVote(int age)</code></td>
+                                <td>Make decisions based on values</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    Final Thoughts<br> Common functions are like tools in a toolbox. The more of them you build and reuse, the faster and smarter you code. They reduce bugs, save time, and make your code easier to read. In real-world applications, teams
+                    often create a Helpers.cs file where they store all these useful utility methods to keep the main logic clean and focused.
+
+
+                </p>
+            </section>
+            <div class="btnquiz">
+                <button><a href="./Course_C_Quiz.html?section=3" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+        </main>
+        <!------------------------>
+        <!------------------------>
+        <!------------------------>
+        <!------------------------>
+        <script>
+            function togglemenu(menuid) {
+                let menu = document.getElementById(menuid);
+                if (menu.style.display === "none" || menu.style.display === "") {
+                    document.querySelectorAll('.sup').forEach(m => m.style.display = "none");
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none"
+                }
+            }
+        </script>
+        <script>
+            document.getElementById("togglesidebar").addEventListener("click", function() {
+                let sidebar = document.querySelector(".sidebar")
+                let content = document.querySelector(".content")
+                if (sidebar.classList.contains("closed")) {
+                    sidebar.classList.remove("closed");
+                    content.classList.remove("shifted");
+                } else {
+                    sidebar.classList.add("closed");
+                    content.classList.add("shifted");
+                }
+            })
+        </script>
+
+        <script>
+            window.addEventListener("scroll", function() {
+                const navbar = document.getElementById("navbar");
+                if (window.scrollY > 100) {
+                    navbar.classList.add("navbar");
+                } else {
+                    navbar.classList.remove("navbar");
+                }
+            });
+        </script>
+        <script src="./java.js"></script>
+</body>
+
+</html>
+
+</html>

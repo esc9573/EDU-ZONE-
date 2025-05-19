@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics</title>
+    <link rel="stylesheet" href="../css/Course_Content.css">
+</head>
+
+<body>
+    <button id="togglesidebar">≡</button>
+    <!-- الهيدر يحتوي على اسم الموقع) -->
+    <header class="header">
+        <nav id="navbar">
+
+            <div class="nav-links">
+                <a href="./home2.html" class="nav-btn1">Home</a>
+                <a href="./course essential.html" class="nav-btn2">Courses</a>
+                <a href="./quiz.html" class="nav-btn3">Quizzes</a>
+                <a href="./support.html" class="nav-btn4">Support</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <!-- القائمة الجانبية -->
+        <div class="sidebar">
+            <h2>Chapters</h2>
+            <ul>
+                <li><a onclick="togglemenu('chapter1-menu')">1.Introduction</a></li>
+                <ul class="sup" id="chapter1-menu">
+                    <li><a href="#sub1">1.1 Introduction to JavaScript and Computer Programming</a></li>
+                    <li><a href="#sub2">1.2 A few more words on JavaScript</a></li>
+                    <li><a href="#sub3">1.3 Local development environment or A few words about HTML</a></li>
+                    <li><a href="#sub4">1.4 The script tag</a></li>
+                    <li><a href="#sub5">1.5  How can we run our JavaScript code?</a></li>
+                </ul>
+                <li><a onclick="togglemenu('chapter2-menu')">2.Basics</a></li>
+                <ul class="sup" id="chapter2-menu">
+                    <li><a href="#subb1">2.1 Variables</a></li>
+                    <li><a href="#subb2">2.2 Naming the variables</a></li>
+                    <li><a href="#subb3">2.3 Initializing variables</a></li>
+                    <li><a href="#subb4">2.4Changing variable values</a></li>
+                    <li><a href="#subb5">2.5  Operators</a></li>
+                </ul>
+                <li><a onclick="togglemenu('chapter3-menu')">3. Functions</a></li>
+
+                <ul class="sup" id="chapter3-menu">
+                    <li><a href="#subbb1">3.1 The if statement</a></li>
+                    <li><a href="#subbb2">3.2 The if … else … if statement</a></li>
+                    <li><a href="#subbb3">3.3 The switch … case statement</a></li>
+                    <li><a href="#subbb4">3.4 The while loop</a></li>
+                    <li><a href="#subbb5">3.5 The for loop</a></li>
+                    <li><a href="#subbb6">3.6 Functions</a></li>
+                    <li><a href="#subbb7">3.7 Function Declarations</a></li>
+                    <li><a href="#subbb8">3.8 Function Expressions</a></li>
+                    <li><a href="#subbb9">3.9  Arrow Functions (ES6)</a></li>
+                    <li><a href="#subbb10">3.9.1 IIFE – Immediately Invoked Function Expression</a></li>
+                    <li><a href="#subbb11">3.9.2 Callback Functions</a></li>
+
+                </ul>
+
+                <li><a href="#chapter4">4. Classes</a></li>
+
+            </ul>
+        </div>
+
+        <!-- المحتوى الرئيسي -->
+        <main class="content">
+            <h1>JavaScript Basics</h1>
+
+            <section id="chapter1">
+                <h2>1. Introduction</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/igQgvntxHA0?si=RqjGw6J_Fku1I8P3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="sub1"><strong>1.1 Introduction to JavaScript and Computer Programming</strong></p>
+                <p>About JavaScript (how to communicate with the computer, what is JS, advantages and limitations of JS, where is JS used today)<br> Setting up the programming environment (development tools, online development environment, local development
+                    environment)
+                    <br> First JS program – Hello, World! (a few words about HTML, how to run your JavaScript code, executing the code directly in the console)</p>
+                <p>So in order to help in communication with the computer, programming languages were invented that are somewhat similar to natural languages (that is, those used for communication between people). There are thousands of programming languages,
+                    and they differ in purpose (aside from general-purpose languages, there are many specialized ones, for example, languages designed only for statistical calculations), level of abstraction (in simple terms: the higher the language level,
+                    the less we need to know about the hardware on which the program is executed), ease of use, effectiveness of the programs written in them, etc. </p>
+
+                <p id="sub2"><strong>1.2 A few more words on JavaScript</strong></p>
+                <p>As we mentioned before, JavaScript is an interpreted programming language.<br> Like most interpreted languages, it is also a high-level language (i.e. relatively easy to understand for people and separating us from the hardware details).
+                </p>
+
+                <p>Back in the early 90s, all web pages were static. Things changed in 1995 when the Netscape corporation hired Brendan Eich, and tasked him to develop a new language for their product, the Netscape Navigator web browser.<br> The new language
+                    was called LiveScript, but soon after its name was changed to JavaScript. Its main task was to add dynamics to websites, which would allow, for example, for more complex interaction with the user. And so the career of JavaScript began.
+                </p>
+                <p id="sub3"><strong>1.3 Local development environment or A few words about HTML</strong></p>
+                <p>Client-side JavaScript is a language of the web and exists only in the web ecosystem. In this setup, JavaScript cannot exist by itself.,<br> JavaScript code needs to be embedded in an HTML document. When we used the online environment
+                    to run our program, certain aspects were hidden from us. This time we will have to look at them more closely.</p>
+                <p>HyperText Markup Language, or HTML for short, is a set of tags used to describe the structure of a website.<br> It allows us to give a page the format of a document containing sections, headers, paragraphs, lists, and the like. HTML is
+                    definitely beyond the scope of the current course, so we will present only some basic information about it, just enough for you to understand where and how we can run the JavaScript code associated with a given page.<br> Tag types
+                    are predefined. For example, the tag that specifies a paragraph is
+                    <p> and the tag for the first degree (largest) header is&lt;H1&gt;. The tag name must be placed in angle brackets. Tags are usually used in pairs, limiting a certain area of the document (we have an opening and a closing tag). The closing
+                        tag is different from the opening tag, because a slash appears before the name. For example, a paragraph may look like this:
+                        <span class="span1">
+                            (p)It's just an ordinary paragraph.(/p)
+
+                           <br> Often, tags can (and sometimes must) be placed within the range of other tags. For example, our paragraph should be placed inside the <body> tags, which separate the main part of our document.
+                            
+                           <br> &lt;body&gt;
+                         <br>   &lt;p&gt;It's just an ordinary paragraph.&lt;/p&gt;
+                          <br>  &lt;/body&gt;
+                            </span>
+                        <br> Minimal HTML document
+                        <span class="span1">
+                           <br> &lt;!DOCTYPE html&gt;
+                           <br> &lt;html&gt;
+                           <br>      &lt;head&gt;
+                           <br>      &lt;title&gt;Empty Page&lt;title&gt;
+                           <br>      &lt;/head&gt;
+                           <br>      &lt;body&gt;
+                                 <br>&lt;/body&gt;
+                                 <br>  &lt;/html&gt;
+                        </span> Let's start with the declaration (!DOCTYPE html). <br>This is not a typical tag, as it is used to inform the browser that the whole document has been prepared according to HTML5. The actual document
+                        description starts with the (html) tag, which together with the (/html) tag sets the boundaries of the document. Every other tag should be inside these.<br> If any given tag holds other content, there will be a corresponding closing
+                        tag, forming some sort of container. The next tag, (head), contains additional information about the document, which must also be placed in tags.<br> The most basic one is the (title) tag, which sets the title of the page mostly
+                        visible in the browser title bar. After (head) there is the (body) element, and the visible content of the web page should be placed there (e.g. our paragraph).
+                    </p>
+                    <p id="sub4"><strong>1.4 The script tag </strong></p>
+                    <p> The JavaScript code to be executed by the browser on the page must be attached to the HTML using the (script) tag, and there are two ways it can be done. The code can be embedded directly inside of the (script) and (/script) tags,
+                        but this is only recommended when the code is short.<br> Another approach is to use the "src" attribute to point to a separate file that contains the JavaScript code.<br> This is especially true when the same code is going to be
+                        used on several pages, because repeating exactly the same code many times is bad practice, as any changes need to be applied to all the files; and additionally, it artificially increases the page size. The JavaScript file extension
+                        is .js.
+                        <br>
+                        <br> HTML is read by the browser line by line, and script tags are executed right at the moment when the browser parses the (script) tag (parsing for programming languages means a formal analysis of the code by a machine in order
+                        to understand its structure).<br> Usually (script) tags are inserted in the page header between the (head) and (/head) tags, and we can insert many of them in a file, for example, in order to include JavaScript code from different
+                        files.
+                        <br> This behavior can be changed for external scripts pointed to by the "src" attribute by using the "defer" or "async" attributes.
+                        <br><br>
+                        <ul>
+                            <li><span class="span2">defer</span> – means that the script should be executed after the whole page is loaded;</li>
+                            <li><span class="span2">async</span> – means that the script will be executed immediately, but in parallel to parsing the rest of the page.</li>
+                        </ul>
+
+                    </p>
+                    <br>
+                    <p id="sub5"><strong>1.5 How can we run our JavaScript code?</strong></p>
+
+                    <p>
+                        Let's start with a simple example, where the browser gets a simple (maybe even an empty) page from. The address is made up for this example, so don't really try to enter it. Look at the figure below.<br>
+                        <img src="../img/type.png" class="imggg">
+                    </p>
+
+                    <p>
+                        However, we are more interested in the fact that the index.html file contains the &lt;script&gt; and &lt;/script&gt;<br> tags, with a piece of JavaScript code between them. Do you recognize it? This is obviously an attempt to show
+                        our "Hello, World!" on the console. When loading the page, the code placed inside the &lt;script&gt; tags should be executed and, if the developer tools are enabled and the console panel is visible, the console will show "Hello,
+                        World!".
+                        <br>
+                        <img src="../img/ready.png" class="imggg">
+                    </p>
+
+                    <p>
+                        Everything will work exactly the same as in the previous scenario, except that the web server will provide the main.js file in addition to index.html. The user will not notice any difference. Of course, placing our code on a remote server just to test
+                        it would be a bit cumbersome.
+                        <br> We have another possibility, which is that we can load a local html file (i.e. one that is on our computer) into the browser. If this code contains a &lt;script&gt; tag indicating some JavaScript file, then this file will
+                        also be loaded from the local resources.
+                        <br> The picture shows a simple scenario in which the user loads a local index.html file into the browser, in which there is a reference to main.js (so this file will automatically be loaded, too).
+
+                        <br>
+                        <br>
+                        <img src="../img/file1.png" class="imggg"><br> You can load a local html file either by typing its local path after file:/// in the address bar, or by simply opening it in your browser using the Open command from the menu. Since
+                        the menu in browsers is very often hidden, a simpler way may be to use a shortcut to open existing documents in applications. The shortcut is universal, not only for browsers and you have probably already seen it:
+                    </p>
+
+            </section>
+            <div class="btnquiz">
+                <button><a href="./JS_Quiz.html?section=1" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+            <!--شابتر اتنين-->
+            <section id="chapter2">
+                <h2>2. Basic </h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XHbf9qc0w0k?si=P0SNZrFawpXBI5YR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="subb1"><strong>2.1 Variables</strong></p>
+                <p>The ability to write various information on the screen, such as "Hello, World!" can be fun for a while, but it is not a universal way of writing programs. It's time to start learning more about the puzzle elements that will ultimately
+                    allow you to create programs that solve real problems.<br> There are quite a few of these elements, and we’ll introduce them gradually, although not necessarily in a simple chronology. We will often come back to what has already been
+                    discussed, extending the previous information with something new.<br> Sometimes we will also go forward, using mechanisms that will only be explained in more detail over time. At first it may seem a bit overwhelming, but with time
+                    everything should start to merge into one coherent picture.
+                    <br>
+                    <br> The first element of programming that we will talk about is the variable. You may know the name of a variable from mathematics, where it means a symbol used as a placeholder for different values that can change. They have a similar
+                    role in programming. <br>What do we actually need them for? As you can guess, most programs are quite complex, and we are rarely able to solve the problem with a single operation. <br>Usually, the program will consist of many more
+                    operations, each of which can produce some intermediate results, which will be needed in the next steps. Variables allow us to store such results, to modify them, or to feed them into subsequent operations.
+                </p>
+                <p id="subb2"><strong>2.2  Naming the variables</strong></p>
+                <p>
+                    Imagine variables as containers in which you can store certain information (such information will be called variable values). Each container must have its own name, by which we will be able to clearly indicate it.
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>abstract</td>
+                                <td>arguments</td>
+                                <td>await</td>
+                                <td>boolean</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>break</td>
+                            <td>byte</td>
+                            <td>case</td>
+                            <td>catch</td>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>class</td>
+                            <td>const</td>
+                            <td>continue</td>
+                        </tr>
+                        <tr>
+                            <td>debugger</td>
+                            <td>default</td>
+                            <td>delete</td>
+                            <td>do</td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td>else</td>
+                            <td>enum</td>
+                            <td>eval</td>
+                        </tr>
+                        <tr>
+                            <td>export</td>
+                            <td>extends</td>
+                            <td>false</td>
+                            <td>final</td>
+                        </tr>
+                        <tr>
+                            <td>finally</td>
+                            <td>float</td>
+                            <td>for</td>
+                            <td>function</td>
+                        </tr>
+                        <tr>
+                            <td>goto</td>
+                            <td>implements</td>
+                            <td>if</td>
+                            <td>import</td>
+                        </tr>
+                        <tr>
+                            <td>in</td>
+                            <td>instanceof</td>
+                            <td>int</td>
+                            <td>interface</td>
+                        </tr>
+                        <tr>
+                            <td>let</td>
+                            <td>long</td>
+                            <td>native</td>
+                            <td>new</td>
+                        </tr>
+                        <tr>
+                            <td>null</td>
+                            <td>package</td>
+                            <td>private</td>
+                            <td>protected</td>
+                        </tr>
+                        <tr>
+                            <td>public</td>
+                            <td>return</td>
+                            <td>short</td>
+                            <td>static</td>
+                        </tr>
+                        <tr>
+                            <td>super</td>
+                            <td>switch</td>
+                            <td>synchronized</td>
+                            <td>this</td>
+                        </tr>
+                        <tr>
+                            <td>throw</td>
+                            <td>throws</td>
+                            <td>transient</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>try</td>
+                            <td>typeof</td>
+                            <td>var</td>
+                            <td>void</td>
+                        </tr>
+                        <tr>
+                            <td>volatile</td>
+                            <td>while</td>
+                            <td>with</td>
+                            <td>yield</td>
+                        </tr>
+
+                    </table>
+                    <br> As we mentioned before, we declare the variable to reserve a name for it.<br>
+                    <span class="span1"><br>var height;
+   <br> console.log(height); // -> undefined
+   <br> console.log(weight); // -> Uncaught ReferenceError: weight is not defined</span> <br> The first line is the variable declaration (we can see the var keyword). This declaration means that the word height will be treated as the
+                    name of the container for certain values.
+
+                </p>
+
+                <p id="subb3"><strong>2.3 Initializing variables</strong></p>
+                <p>After a successful declaration, the variable should be initialized, in other words, it should be given its first value. Initialization is done by assigning a certain value to a variable (indicated by its name). To assign it, we use the
+                    operator <span class="span2">=</span>.<br>
+                    <br> <img src="./virable.png" class="imggg"> <br>You can assign to a variable: a specific value; the contents of another variable; or, for example, the result returned by a function. Initialization can be done either together with
+                    the declaration, or separately as an independent command. It is important to enter the first value into the variable before trying to read, modify, or display it.
+                    <br> <span class="span1"><br>let height = 180;
+                  <br>let anotherHeight = height;
+                  <br>let weight;
+                  <br>console.log(height); // -> 180
+                  <br>console.log(anotherHeight); // -> 180
+                  <br>weight = 70;
+                  <br>console.log(weight); // -> 70
+                </span>
+                    <br> In the above example (check it in the editor), the declarations of the variables height and anotherHeight are combined with their initialization, while the variable weight is declared and initialized separately. The height and
+                    weight variables are initialized by providing specific values (more precisely, a number), while the anotherHeight variable receives a value read from the height variable. The values of all the variables are displayed on the console.
+                </p>
+                <p id="subb4"><strong>2.4  Changing variable values</strong></p>
+                <p>
+                    Variables, as their name suggests, can store data that will vary. Changes are made by assigning a new value to the variable, which overwrites the previous one.
+                    <br>
+                    <span class="span1">
+                        <br>let steps = 100;
+                       <br> console.log(steps); // -> 100
+                        <br>steps = 120; // -> 120
+                        <br>console.log(steps);
+                        <br>steps = steps + 200;
+                        <br>console.log(steps); // -> 320
+                        </span> In our example, we’ve declared a variable called steps. Initially, it contains the number 100, which is then changed to 120. Then we add 200 to the current contents of the variable, as a result of which
+                    the variable contains 320.
+                    <br> JavaScript allows us to easily replace the greeting variable with a value whose type is different from the one originally stored there.<br> JavaScript goes one step further and not only allows us to change the types of values
+                    kept in a variable, but it also performs their implicit conversion if necessary (we will also return to this topic of conversion when discussing types).<br> Let's restore the original value of the greeting variable and then add the
+                    value of the counter variable to it.
+                    <span class="span1">
+                        <br>let greeting = "Hello!";
+                        <br>let counter = 100;
+                        <br>greeting = greeting + counter;
+                        <br>console.log(greeting); // -> Hello!100</span>
+                    <br> The interpreter will check the type of value stored in the greeting variable and convert the value from the counter variable to the same type before performing an addition operation. As a result, the string "100" will be added
+                    to the <span class="span2"> "Hello!"</span> character string and stored to the greeting variable. By the way, note that JavaScript interprets 100 as a number, but <span class="span2">"100"</span> as a string.
+                    <br>
+                    <br>
+
+                    <h3><strong> Comments</strong> </h3>
+                    Comments are a common thing in programming. "Commenting" may not be a key programming technique (if you can call it a technique), but it allows you to improve your work with the code, among other things by making it more readable. So what are comments,
+                    and why do we need them? Comments are just plain text, totally ignored by the JavaScript interpreter, that usually serve to explain a certain piece of code, which for some reasons may not be fully legible. However, we cannot write
+                    them completely freely, as the interpreter will try to treat them as commands, variable names, or keywords.
+                    <br> Single-line comments
+                    <br>This is the primary way to comment code. It uses a double slash character at the start of the comment that spans to the end of the line.
+                    <span class="span1"><br>// This is a single-line comment
+                        <br>let x = 42; // This is also a single line comment, although the part before the double slash is proper code and will be executed
+                        <br>// This line and the next one will be ignored
+                        <br>// x = 8;
+                        <br>console.log(x); // -> 42
+                    </span>
+
+                </p>
+
+                <p id="subb5"><strong>2.5 Operators</strong><br> Operators in programming languages are symbols (sometimes also names) that are used to perform certain actions on arguments called operands.<br> Operands can be both values and variables. We have encountered
+                    operators several times in previous examples, for example, the assignment symbol <span class="span2"> =</span> or the keyword <span class="span2">typeof</span>.<br> Operators can be categorized in several ways. They are distinguished,
+                    for example, by the number of operands they work on. The addition operator + is a typical binary operator (it uses two operands), while the typeof operator is unary (it uses only one operand).
+
+                </p>
+                <p><strong> Assignment operators</strong><br> Let's start with the assignment operators. In this group, there are operators that allow for the assigning of values to variables and constants.<br> The basic assignment operator is the equals
+                    sign =, which we have already seen many times in the examples. This operator assigns the value of the right operand to the left operand.<br>
+                    <span class="span1"><br>const name = "Alice";
+                       <br> console.log(name); // -> Alice<br>
+                      <br>  let year = 2050;
+                      <br>let newYear = year = 2051;
+                      <br>let year = 2050;
+                      <br>year = 2051;
+                      <br>let newYear = year;
+
+                    </span> In addition to the basic assignment operator, there are also assignment operators connected to arithmetic, logical, and string operators. We will come back to them when discussing the other operator categories.
+                </p>
+
+            </section>
+            <div class="btnquiz">
+                <button> <a href="./JS_Quiz.html?section=2" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+            <section id="chapter3">
+                <h2>3. The Basic In JavaScript</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cCSsnlb59UA?si=baNE1gtb431H6D--" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="subbb1"><strong>3.1 The if statement</strong></p>
+                <p>The if statement is the first and simplest control flow instruction available in JavaScript.<br> It has a few forms, but in its basic form, it checks a given condition, and depending on its Boolean value, either executes a block of code,
+                    or skips it. The syntax looks like this:
+                    <span class="span1">
+                        <br>if (condition) {
+                        <br>block of code
+                <br>    }
+
+                    </span> The if keyword needs to be followed by the expression in parentheses, which will be evaluated to the Boolean, and if the result is true, the block of code that follows the conditional expression is executed.<br>                    If the expression evaluates to false, the block of code will NOT be executed.<br> The code block should be separated using curly brackets.
+                    <br> Let's start with a simple example, in which, in addition to the conditional instruction, we will use the recently learned dialog boxes:
+                    <span class="span1"><br>let isUserReady = confirm("Are you ready?");
+                    <br>if (isUserReady) {
+                 <br>       console.log("User ready!");
+                <br>    } else {
+                      <br>  console.log("User not ready!");
+                    }</span> Now we have only one condition, and we’re sure that one of the two code blocks will be executed. Such a structure is used very often and is especially useful when we have two alternative versions of the
+                    code.
+                </p>
+
+                <p id="subbb2"><strong>3.2 The if … else … if statement</strong></p>
+                <p>Both if and if … else statements give us great flexibility in how code can behave in relation to anything else.<br> But branching the code execution flow only to two branches is sometimes not enough.<br> There’s a simple solution to this
+                    in JavaScript – we can nest if ... else statements. How does this work? An else segment can have an if or if … else statement inside it, and it’s possible to nest any number of if … else statements in this way if needed.
+                    <span class="span1">
+                        let number = prompt("Enter a number", 0);
+                       <br> if (number < 10) {
+                        <br> alert("<10");
+                        <br>   } else if (number < 30) {
+                            <br>       alert("<30");
+                            <br>    } else if (number < 60) {
+                                <br>       alert("<60");
+                                <br>    } else if (number < 90) {
+                                    <br>        alert("<90");
+                                    <br>    } else if (number < 100) {
+                                        <br>        alert("<100");
+                                        <br>    } else if (number == 100) {
+                                            <br>       alert("100")
+                            <br>    } else {
+                                <br>       alert(">100")
+                                <br>    }
+                      </span> In the code visible in the example, only one alert will be shown, and JavaScript will stop checking conditions after the first condition that has been met.In the next, longer example, we can see the usage
+                    of cascading ifs with elses, and also complex logical conditions.
+                </p>
+                <p id="subbb3"><strong>3.3 The switch … case statement</strong></p>
+                <p> The last type of statement that is used for conditional code execution is a switch statement.<br> We’re only talking about it now because, among other things, compared to the if statement, it is not a construction used especially often.<br>                    It’s somewhat similar to nested if … else statements, but instead of evaluating different expressions, switch evaluates one conditional expression and then tries to match its value to one of the given cases. Here is the syntax of the
+                    switch statement:
+                    <span class="span1">
+                        switch (expression) {
+                            case first_match:
+                             code
+                             break;
+                            case second_match:
+                             code
+                             break;
+                            default:
+                             code
+                        }
+                        
+                </span>
+                    <br> Additionally, a special case named default can be present (by convention placed on the end of the switch statement; however, it isn’t required). The default case is executed when none of the cases matches the expression. The evaluation
+                    itself is made with a strict comparison operator (===) so not only must the value match, but also the type of case value and the expression.
+
+                    <span class="span1">
+                   <br>     let gate = prompt("Choose gate: a, b, or c");
+                   <br>  let win = false;
+                   <br>  switch (gate) {
+                    <br>      case "a":
+                    <br>        alert("Gate A: empty");
+                    <br>         break;
+                             <br>       case "b":
+                             <br>        alert("Gate B: main prize");
+                             <br>          win = true;
+                             <br>          break;
+                             <br>           case "c":
+                             <br>                 alert("Gate C: empty");
+                             <br>              break;
+                             <br>           default:
+                             <br> alert("No gate " + String(gate));
+                             <br>   }
+                             <br>   if (win) {
+                                <br>        alert("Winner!");
+                                <br>      }
+                </span>
+
+                </p>
+
+                <p id="subbb4"><strong>3.4 The while loop</strong></p>
+                <p> So we know that loops allow us to execute a selected piece of code multiple times. But what would be the purpose of this? Imagine that in the program, we have created an array containing information about system users. If we wanted to
+                    display the name of each of them on the console, we would have to write console.log as many times as there are users.
+                    <br>Example :Let's start with an example where we do not use a loop. Our goal is to write out the consecutive numbers 0, 10, 20, 30, 40, 50, 60, 70, 80 and 90 on the console.
+                    <span class="span1"><br>let n = 0;
+                        <br> while(n < 91) {
+                            <br>   console.log(n); // -> 0, 10, 20, 30, 40, 50, 60, 70, 80, 90
+                            <br>   n += 10;
+                            <br>  }
+    </span> The while loop is so versatile that someone persistent enough could replace all other control flow instructions with while loops, even if statements. Of course, it would be cumbersome at best. The while loop is one of the
+                    loops that we normally use when we don't know exactly how many times something should be repeated, but we do know when to stop. The syntax of the while loop is as follows:
+                    <br>Example : This time, the decision whether the loop is to end will be made by the user answering the question asked during each iteration of the loop (we will use the confirm dialog we recently introduced).
+                    <span class="span1">let isOver = false;
+                      <br>  let counter = 1;
+                      <br> while (isOver != true) {
+                        <br>     let continueLoop = confirm(`[${counter}] Continue the loop?`);
+                        <br>     isOver = continueLoop === true ? false : true;
+                        <br>     counter = counter + 1;
+                        }</span>
+                    <br>
+                    <br> The do ... while loop is very similar to the plain while loop, the main difference being that in a while loop, the condition is checked before each iteration, and in the do ... whileloop, the condition is checked after each iteration.<br>                    This doesn’t seem like a big difference, but the consequence of this is that a do ... while loop code is always executed at least once before the first condition check is done, and a plain while may never be executed at all if the
+                    initial condition is evaluated to false at the beginning of the loop. The syntax of the do ... while loop looks as follows:
+                    <span class="span1"><br>let isOver;
+                       <br> let counter = 1;
+                    <br>    do {
+                        <br>    isOver = !confirm(`[${counter++}] Continue the loop?`);
+                       <br> } while (!isOver);</span><br> In the next example, we demonstrate what we said earlier – a do ... while loop always iterates at least once:
+                    <span class="span1"><br>let condition = false;
+                        <br>  while (condition) {
+                            <br>     console.log("A while loop iteration."); // never executed
+                            <br> }
+                            <br> do {
+                                <br>     console.log("A do ... while loop iteration."); // executed once
+                                <br>  } while (condition);</span>
+
+                </p>
+
+                <p id="subbb5"><strong>3.5 The for loop</strong></p>
+                <p> The for loop is part of the second type of loops, the one which is better in situations where we know how many times the loop should be executed (although this is not necessary). The syntax of the for loop is a bit more complicated and
+                    looks as follows:
+                    <br>
+                    <span class="span1">for (let i = 0; i < 10; i++) {
+                       <br> console.log(i);
+                    }</span> Let's move on to another simple example. Let's assume that we have a four-element array of integers at our disposal and our dream is to sum up all these numbers. There is nothing easier than to go through
+                    the array, taking the element one by one and adding them to the result. We just have to remember that before starting the loop, the result is 0.
+                    <span class="span1"> <br>let values = [10, 30, 50, 100];
+                        <br> let sum = 0;
+                        <br>  for (let i = 0; i < 4; i++) {
+                            <br>     sum += values[i];
+                            <br>  }
+                            <br>   console.log(sum); // -> 190
+        </span>
+                    <br> Loops and arrays<br><br> Let's try to play with arrays again. This time the program will be a bit more complicated.<br> We want the user to enter names during the program's execution (we will use the prompt dialog box), which
+                    will be placed in the array one by one.<br> Entering the names will end when the Cancel button is pressed. Then we will write the entire contents of the array (i.e. all entered names) to the console.
+                    <span class="span1"><br>let names = [];
+                        <br>  let isOver = false;
+                        <br>  while (!isOver) {
+                            <br>      let name = prompt("Enter another name or press cancel.");
+                            <br>      if (name != null) {
+                                <br>      names.push(name);
+                                <br>     } else {
+                                    <br>      isOver = true;
+                                    <br>      }
+                                    <br>    }
+                                    <br>    for (let i = 0; i < names.length; i++){
+                                        <br>        console.log(names[i]);
+                        }
+                        </span><br> There is also nothing to stop us from jumping a few elements at a time, incrementing or decrementing the index variable by a value greater than one. Take a look at the example below:
+                    <span class="span1"><br>let values = [10, 30, 50, 100];
+                        <br> for (let i = 0; i < values.length; i++) {
+                            <br>     console.log(values[i]); // -> 10, 30, 50, 100
+                            <br>  }
+                            <br>  for (let i = values.length - 1; i > 0; i--) {
+                                <br>      console.log(values[i]); // -> 100, 50, 30, 10
+                                <br>    }
+                                <br>    for (let i = 0; i < values.length; i += 2) {
+                                    <br>        console.log(values[i]); // -> 10, 50
+                        }</span>
+                </p>
+                <br>
+                <br>
+                <p id="subbb6"><strong>3.6 Functions</strong></p>
+                <p>We talked about functions in the chapter on variables, when we discussed the scope of visibility of local variables declared with the keyword var. We learned on this occasion what functions are, but in this chapter, we will take a much
+                    closer look at them, expanding our knowledge on the subject. <br>So what is a function? It's a separated piece of code, constituting a certain closed logical whole, intended to perform a specific task. We usually assign a name to such
+                    a separated piece of code. With this name, we can call it (execute it) many times in different places of the program.<br> This is a simplification, because there are functions that do not have a name, for example, anonymous functions
+                    (we will talk about them later).<br> For the time being, let’s assume that a function has a name, which we give when declaring it. This name is used when calling the function, in other words, when running the code contained in it.
+                    The declaration and calling of functions are independent of each other, which we will see in a moment.
+                    <br> Why do we use functions? There are many reasons, one of the most important being to divide the code into some logically independent parts.<br> Such modularity increases the readability of the code – it is easier to write and analyze
+                    a long program that is not a sequence of single instructions. It also allows for easy testing of code fragments closed in functions independently of the rest of the program.<br> A very important reason for using a function is the reuse
+                    of code – if you repeat the same sequence of instructions in the program in many places, you can close this sequence in a function, and in those places you only have to call the function.<br><br><span class="span2">before</span>
+
+                    <span class="span1"><br>let temperatures;
+                       <br> let sum;
+                       <br> let meanTemp;
+                       <br>  temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16];
+                       <br>  sum = 0;
+                       <br>  for (let i = 0; i &lt; temperatures.length; i++) {
+                        <br>       sum += temperatures[i];
+                        <br>   }
+                        <br>   meanTemp = sum / temperatures.length;
+                        <br>   console.log(`mean: ${meanTemp}`); // -> mean: 16.666666666666668
+                        <br>    temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
+                        <br>     sum = 0;
+                        <br>      for (let i = 0; i &l temperatures.length; i++) {
+                            <br>             sum += temperatures[i];
+                             <br>        }
+                             <br>         meanTemp = sum / temperatures.length;
+                             <br>          console.log(`mean: ${meanTemp}`); // -> mean: 18.083333333333332</span>
+                    <br><span class="span2">After</span><br>
+                    <span class="span1"><br>let temperatures;
+                        <br>  let meanTemp;
+                        <br>  function getMeanTemp() {
+                            <br>     let sum = 0;
+                            <br>     for (let i = 0; i &lt; temperatures.length; i++) {
+                                <br>      sum += temperatures[i];
+                                <br>      }
+                                <br>     meanTemp = sum / temperatures.length;
+                                <br>   }
+                                <br>  temperatures = [12, 12, 11, 11, 10, 9, 9, 10, 12, 13, 15, 18, 21, 24, 24, 23, 25, 25, 23, 21, 20, 19, 17, 16];
+                                <br>   getMeanTemp();
+                                <br>  console.log(`mean: ${meanTemp}`); // -> mean: 16.666666666666668
+                        <br>    temperatures = [17, 16, 14, 12, 10, 10, 10, 11, 13, 14, 15, 17, 22, 27, 29, 29, 27, 26, 24, 21, 19, 18, 17, 16];
+                        <br>  getMeanTemp();
+                        <br>    console.log(`mean: ${meanTemp}`); // -> mean: 18.083333333333332</span> <br>Our getMeanTemp is slowly beginning to look like a normal function. It is a logically independent piece of code, it returns
+                    a calculated value, and it operates on local variables. There is one small problem left to solve. We count the mean using the data contained in the global variable temperatures. And the function should be independent of what is happening
+                    outside it. At the same time, it should allow us to calculate the mean value for different data. How do we reconcile these two conflicting demands?
+
+                </p>
+                <p id="subbb7"><strong>3.7 Function Declarations</strong></p>
+                <p> What are Function Declarations in JavaScript, and why are they considered the default way to define functions?<br> Function Declarations are the standard way to define a named function in JavaScript. They use the function keyword, followed
+                    by the name of the function, a list of parameters inside parentheses, and a code block inside curly braces {}.<br><span class="span1">  <br>console.log(square(5)); // -> 25
+
+                   <br>     function square(x) {
+                    <br> return x * x;
+                        }</span> Line-by-line Explanation: function square(x): declares a function named square that takes one parameter x. return x * x;: returns the square of the number passed. console.log(square(5));: calls the function before it's
+                    declared — and it works because of hoisting.<br> <br>During your math lessons, you probably came across the concept of factorials. A factorial is a function, indicated by an exclamation mark in mathematical notation. We pass an integer
+                    to this function and its result is obtained by multiplying all integers from the number 1 to the number given as an argument.<br> Formally, you define a factorial as follows: n!=n∙(n-1)∙(n-2)∙... ∙2∙1 So, for example, the factorial
+                    of 6 is: 6!=6∙5∙4∙3 ∙2∙1=720 Let's try to write a function that will calculate the factorial from the given number.<br> It will take the parameter n and return the calculated value.
+                    <br>
+                    <span class="span1"><br>function factorial (n) {
+                        <br> let result = 1;
+                        <br> while (n > 1) {
+                            <br>  result *= n;
+                            <br>  n--;
+                            <br>    }
+                            <br>    return result;
+                            <br>  }
+                            <br>   console.log(factorial(6)); // -> 720
+                   </span><br> In this case, we use the iterative approach to calculate the factorial, in other words, we use a loop in which, during each iteration we multiply the previous result by another element of the sequence.
+                </p>
+                <p id="subbb8"><strong>3.8 Function Expressions</strong></p>
+                <p><br>How do Function Expressions differ from Function Declarations, and when should you use them?<br>Function Expressions define a function and assign it to a variable. Unlike Function Declarations, they are not hoisted, so they must be
+                    defined before they’re called.<br> They can be anonymous (no name), or named expressions, and are very useful when passing functions around (e.g., callbacks, closures).
+                    <span class="span1"><br>const greet = function(name) {
+                        <br>    return "Hello " + name;
+                        <br>  };
+                      
+                        <br>   console.log(greet("Nora")); // -> Hello Nora
+                      </span><br>Line-by-line Explanation: const greet = function(name) {...}: creates a function and stores it in a variable called greet.<br> The function is anonymous, meaning it has no name after function.<br> It
+                    must be defined before it is called — no hoisting here! console.log(...): executes the function using the variable name.<br> <br> How can you assign a named function to a variable, and what happens when you call the variable instead
+                    of the function name directly?<br> In JavaScript, functions are first-class citizens, which means they can be treated like any other value: stored in variables, passed as arguments, or returned from other functions. <br>You can take
+                    a named function and assign it to another variable.<br> Both the function name and the new variable point to the same function object in memory.<br>
+                    <span class="span1"><br>function add(a, b) {
+                        <br>return a + b;
+                        <br> }
+                      
+                        <br> let myAdd = add;
+                      
+                        <br>  console.log(myAdd(10, 20)); // -> 30
+                        <br>  console.log(add(10, 20));   // -> 30
+                      </span><br> Line-by-line Explanation: function add(a, b) {...}: defines a named function add. <br>let myAdd = add;: assigns the add function to the variable myAdd. <br>Both myAdd and add now reference the same
+                    function — calling either gives the same result.
+                </p>
+                <p id="subbb9"><strong>3.9  Arrow Functions (ES6)</strong></p>
+                <p><br> What are Arrow Functions in JavaScript, and how do they simplify function syntax while changing the behavior of this?<br> Arrow functions were introduced in ES6 to provide a shorter, cleaner syntax for writing functions. But it's
+                    not just about writing less — arrow functions also do not bind their own this, which can be helpful (or dangerous) depending on the situation!<br>Example 1 – Basic Syntax:
+                    <span class="span1">
+                        <br>  const add = (a, b) => {
+                       <br>   return a + b;
+                       <br>  };
+                        
+                       <br>     console.log(add(2, 3)); // -> 5</span><br> Example 2 – Short One-liner with Implicit Return: <br>
+                    <span class="span1"><br>const multiply = (a, b) => a * b;
+
+                        console.log(multiply(4, 5)); // -> 20
+                        </span><br> Important Note about this:<br>
+                    <span class="span1"><br>const person = {
+                    <br>    name: "Lina",
+                    <br> greet: () => {
+                        <br>    console.log("Hello, " + this.name);
+                        <br>   }
+                        <br> };
+                      
+                        <br>   person.greet(); // -> Hello, undefined (because `this` is not bound)</span></p> In arrow functions, this refers to the outer lexical scope — not the object it’s in. This is different from regular functions!
+
+
+
+
+                <p id="subbb10"><strong>3.9.1 IIFE – Immediately Invoked Function Expression</strong></p>
+                <p><br> What is an IIFE and why would you use one in JavaScript?<br> An IIFE (Immediately Invoked Function Expression) is a function that is defined and executed immediately.<br> It's commonly used to: Create a private scope Avoid polluting
+                    the global namespace Run some one-time setup code
+                    <span class="span1"><br>(function() {
+                        <br>  console.log("This runs immediately!");
+                        <br>  })();</span><br> Or using an arrow function:
+                    <span class="span1"><br>(() => {
+                        <br>console.log("Arrow IIFE running!");
+                        <br>  })();</span> How it works: The function is wrapped in parentheses to make it an expression. The last () executes the function immediately.<br> Real-world use case: Private variables<br><span class="span1"><br>const counter = (function() {
+                            <br>    let count = 0;
+                            <br>  return {
+                                <br> increment: () => ++count,
+                                <br>  get: () => count
+                                <br>  };
+                                <br>   })();
+                          
+                                <br>   console.log(counter.increment()); // -> 1
+                                <br>   console.log(counter.increment()); // -> 2
+                                <br>    console.log(counter.get());       // -> 2</span> This way, count is private, and only accessible through the returned object.
+
+                </p>
+
+                <p id="subbb11"><strong>3.9.2 Callback Functions</strong></p>
+                <p><br>What is a Callback Function, and how is it used to handle asynchronous behavior in JavaScript?<br> A callback function is a function that is passed as an argument to another function, and is usually executed after something happens.
+                    They're the heart of: Event handling Array methods like map, filter, and forEach Asynchronous code like<span class="span2"> setTimeout, fetch, etc.</span><br> Example – Synchronous callback:<br>
+                    <span class="span1"><br>function processUserInput(callback) {
+                        <br>   const name = "Sara";
+                        <br>  callback(name);
+                        <br>  }
+                      
+                        <br> function greet(name) {
+                            <br>    console.log("Hello " + name);
+                            <br>   }
+                      
+                            <br>   processUserInput(greet); // -> Hello Sara
+                      </span>
+                    <br>Example – Asynchronous callback:<br>
+                    <span class="span1"><br>setTimeout(() => {
+                        <br>console.log("This runs after 2 seconds");
+                        <br>  }, 2000);
+                      </span> Callback pattern: The function is not executed immediately. It’s just handed off to be called later (by setTimeout, map, etc.)<br>
+
+                </p>
+            </section>
+            <div class="btnquiz">
+                <button><a href="./JS_Quiz.html?section=3" class="quiz-btn">Basic Concepts </a></button>
+
+            </div>
+        </main>
+        <!------------------------>
+        <!------------------------>
+        <!------------------------>
+        <!------------------------>
+        <script>
+            function togglemenu(menuid) {
+                let menu = document.getElementById(menuid);
+                if (menu.style.display === "none" || menu.style.display === "") {
+                    document.querySelectorAll('.sup').forEach(m => m.style.display = "none");
+                    menu.style.display = "block";
+                } else {
+                    menu.style.display = "none"
+                }
+            }
+        </script>
+        <script>
+            document.getElementById("togglesidebar").addEventListener("click", function() {
+                let sidebar = document.querySelector(".sidebar")
+                let content = document.querySelector(".content")
+                if (sidebar.classList.contains("closed")) {
+                    sidebar.classList.remove("closed");
+                    content.classList.remove("shifted");
+                } else {
+                    sidebar.classList.add("closed");
+                    content.classList.add("shifted");
+                }
+            })
+        </script>
+
+        <script>
+            window.addEventListener("scroll", function() {
+                const navbar = document.getElementById("navbar");
+                if (window.scrollY > 100) {
+                    navbar.classList.add("navbar");
+                } else {
+                    navbar.classList.remove("navbar");
+                }
+            });
+        </script>
+        <script src="./java.js"></script>
+</body>
+
+</html>

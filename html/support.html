@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/supporcss.css">
+    <title>Contact Us - EduZone</title>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-logo">
+            <img src="../img/logo.png">
+        </div>
+        <div class="nav-links">
+            <a href="./home2.html" class="nav-btn1">Home</a>
+            <a href="./course_essential.html" class="nav-btn2">Courses</a>
+            <a href="./quiz 2.html" class="nav-btn3">Quizzes</a>
+        </div>
+        <div class="nav-login">
+
+        </div>
+
+        <!-- Navbar Menu For Madia Query 990px -->
+        <i class="fa-solid fa-bars menu-icon "></i>
+        <div class="navbar-menu ">
+            <i class="fa-solid fa-xmark close-btn "></i>
+            <ul>
+                <li><a href="./home2.html ">Home</a></li>
+                <li><a href="./course_essential.html ">Courses</a></li>
+                <li><a href="./quiz 2.html ">Quizzes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="contact ">
+        <div class="hero ">
+            <h1>Contact Us</h1>
+            <p>We'd Love To Hear From You</p>
+        </div>
+    </section>
+
+
+    <section class="form">
+        <div class="box">
+            <div class="tab-side ">
+                <div class="tab-btn active-tab " data-tab="contact-tab ">
+                    <i class="fa-solid fa-comments "></i>
+                    <h4>Contact Us</h4>
+                </div>
+                <div class="tab-btn " data-tab="info-tab ">
+                    <i class="fa-solid fa-circle-info "></i>
+                    <h4>Other</h4>
+                </div>
+            </div>
+
+            <div class="area">
+                <!-- Contact Tab -->
+                <div id="contact-tab " class="tab-content show-tab ">
+                    <div class="input-row ">
+                        <div class="input-box ">
+                            <p>First name </p>
+                            <input type="text " placeholder="First name " />
+                        </div>
+                        <div class="input-box ">
+                            <p>Last name</p>
+                            <input type="text " placeholder="Last name " />
+                        </div>
+                    </div>
+
+                    <div class="input-row ">
+                        <div class="input-box ">
+                            <p>Email </p>
+                            <input type="email " placeholder="Your email address " />
+                        </div>
+                        <div class="input-box ">
+                            <p>Subject </p>
+                            <input type="text " placeholder="Your subject " />
+                        </div>
+                    </div>
+
+                    <div class="input-box ">
+                        <p>Message </p>
+                        <input type="text " placeholder="Describe your message " class="message-field " />
+                    </div>
+
+                    <button onclick="window.location.href='./support.html' ; alert( 'done for sending') ">Submit Query</button>
+                </div>
+
+                <!-- Info Tab -->
+                <div id="info-tab " class="tab-content ">
+                    <div class="panel ">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-envelope "></i> Email: mohaahamada@gmail.com</p>
+                        <p><i class="fas fa-phone "></i> Phone: +20101508471</p>
+                        <p><i class="fas fa-map-marker-alt "></i> Address: 123 Education St, Learning City</p>
+                        <div class="social-media ">
+                            <h3>Follow Us</h3>
+                            <a href="# "><i class="fab fa-facebook "></i></a>
+                            <a href="# "><i class="fab fa-twitter "></i></a>
+                            <a href="# "><i class="fab fa-instagram "></i></a>
+                            <a href="# "><i class="fab fa-linkedin "></i></a>
+                            <a href="# "><i class="fab fa-youtube "></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // شيل الكلاس من كل العناصر
+                    tabButtons.forEach(btn => btn.classList.remove('active-tab'));
+                    tabContents.forEach(tab => tab.classList.remove('show-tab'));
+
+                    // ضيف الكلاس للعناصر الصح
+                    button.classList.add('active-tab');
+                    document.getElementById(button.dataset.tab).classList.add('show-tab');
+                });
+            });
+        });
+    </script>
+
+
+    <script src="navbar.js "></script>
+</body>
+
+</html>
